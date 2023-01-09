@@ -2,7 +2,9 @@ const observer = new PerformanceObserver(list => {
   list.getEntries().forEach(entry => {
     if (entry.type === 'back_forward') {
       console.log(1);
-      location.reload();
+      setTimeout(() => {
+        location.reload();
+      }, 3000);
     }
   });
 });
